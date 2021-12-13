@@ -1,0 +1,46 @@
+#:import C kivy.utils.get_color_from_hex
+<MyLayout>:
+    
+    
+    download:download
+    upload:upload
+    
+    BoxLayout:
+        orientation: 'vertical'
+        width:root.width
+        height:root.height
+        
+        
+           
+        
+        Label:
+            id:download
+            text:'Download : '
+            color: C("#c2c200")
+            font_size:25
+        
+        Label:
+            id:upload
+            text:'Upload : '
+            color: C("#c2c200")
+            font_size:25
+        GridLayout:       
+            cols:2
+            Button:
+                
+                text:'Test Download'
+                font_size:20
+                background_color: C("#c2c200")
+                on_press:root.btn()
+                on_release:root.btnD()
+        
+            Button:
+                
+                text:'Test Upload'
+                font_size:20
+                background_color: C("#c2c200")
+                on_press:root.btn()
+                on_release:root.btnU()
+         
+
+        
